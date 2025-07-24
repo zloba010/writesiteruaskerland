@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чтец книг</title>
+    <link rel="stylesheet" href="und.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Чтец книг</h1>
+        <input type="file" id="file-input" accept=".txt" />
+        <button id="load-button">Загрузить книгу</button>
+        <select id="voice-select"></select>
+        <input type="range" id="speed-range" min="0.5" max="2" step="0.1" value="1" />
+        <label for="speed-range">Скорость: <span id="speed-value">1</span></label>
+        <button id="speak-button">Читать</button>
+        <button id="download-audio-button">Скачать аудио</button>
+        <div id="book-list"></div>
+        <div id="reading-area" style="display: none;">
+            <h2 id="book-title"></h2>
+            <p id="book-content"></p>
+        </div>
+    </div>
+    <script src="und.js"></script>
+</body>
+</html>

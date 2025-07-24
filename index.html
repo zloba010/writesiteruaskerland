@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Write-Site by RuAskerLand</title>
+
+  <!-- Подключаем стили Prism для подсветки синтаксиса -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="container">
+    <!-- Панель управления -->
+    <div id="controls">
+      <h2 id="siteName">Write-Site by <a href="https://ruaskerland.glitch.me">RuAskerLand</a></h2>
+      <p id="currentTime"></p>
+      <button id="toggleTheme">Переключить тему</button>
+      <button id="saveSite">Скачать проект</button>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    </div>
+
+    <!-- Основные формы для ввода HTML, CSS и JS -->
+    <div id="formContainer" class="resizable-container">
+      <div id="htmlCode" class="codeBox language-markup" contenteditable="true" placeholder="Введите HTML код"></div>
+      <div id="cssCode" class="codeBox language-css" contenteditable="true" placeholder="Введите CSS код"></div>
+      <div id="jsCode" class="codeBox language-javascript" contenteditable="true" placeholder="Введите JS код"></div>
+      
+      <!-- Контейнер для изменения размера -->
+      <div id="resizeHandle" class="resize-handle"></div>
+    </div>
+
+    <!-- Окно предпросмотра -->
+    <div id="previewContainer">
+      <iframe id="preview" title="Preview" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
